@@ -1,0 +1,24 @@
+{
+  "name": "reali",
+  "version": "1.0.0",
+  "description": "reali execrise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanuca/reali.git"
+  },
+  "author": "Moshe Hanuca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanuca/reali/issues"
+  },
+  "homepage": "https://github.com/hanuca/reali#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "1.6.7",
+    "lodash": "4.17.4"
+  }
+}
