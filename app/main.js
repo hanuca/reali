@@ -5,7 +5,7 @@ import css from './main.css';
 
 
 
-    var seriesApp = angular.module('series-app', ['']);
+    var seriesApp = angular.module('series-app', []);
 
     seriesApp.controller('seriesCtrl', function() {
 

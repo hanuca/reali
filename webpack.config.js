@@ -1,13 +1,16 @@
 var path = require("path");
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   entry: {
+    vendor: ["./app/vendor.js"],
     app: ["./app/main.js"]
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "app.js"
+    filename: "[name].js"
   },
   module: {
     rules: [
@@ -23,8 +26,16 @@ module.exports = {
     port: 8080
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor'],
+      minChunks: 1
+    }),
     new HtmlWebpackPlugin({
-      template: 'app/index.html'
+      template: 'app/index.html',
+      chunks: [
+        'vendor',
+        'app',
+      ],
     })
   ]
 };
