@@ -12,7 +12,7 @@
         </h2>
         <ul class="list" >
             <li ng-repeat="series in seriesList">
-                <series-component series="series"></series-component>
+                <series-component series="series" ng-click="getEpisodes(series)"></series-component>
             </li>
         </ul>
     </div>
@@ -22,7 +22,7 @@
             Episodes
         </h2>
         <ul class="list" >
-            <li ng-repeat="item in episodeList">
+            <li ng-repeat="episode in episodesList">
                 {{episode.title}}
             </li>
         </ul>

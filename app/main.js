@@ -16,6 +16,16 @@ import css from './main.css';
             });
         }
 
+        $scope.getEpisodes = function(series) {
+            $scope.episodesList = [];
+            var episodesPromise = seriesService.getEpisodes(series.id);
+            episodesPromise.then(function(data) {
+                _.forEach(data, function(item) {
+                    $scope.episodesList.push(item);
+                });
+            });
+        };
+
         function init() {
             getSeries();
         }
