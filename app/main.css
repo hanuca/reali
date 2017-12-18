@@ -1,3 +1,5 @@
+@import 'components/section-component/section-component.css';
+
 html {
   height: 100%;
 }
@@ -11,4 +13,6 @@ html {
     width: 33%;
     height: 100%;
     background-color: #00e7ff38;
+    border: 2px solid black;
+    box-sizing: border-box;
 }
