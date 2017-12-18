@@ -23,17 +23,17 @@
         </h2>
         <ul class="list" >
             <li ng-repeat="episode in episodesList">
-                <episode-component episode="episode" ng-click="play(episode)"></episode-component>
+                <episode-component episode="episode" ng-click="playEpisode(episode)"></episode-component>
             </li>
         </ul>
     </div>
 
     <div class="section">
-
+        <video width="320" height="240" controls ng-if="episodeUrl">
+            <source src="{{episodeUrl}}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-
-
-    <!-- Player -->
 
 </body>
 </html>

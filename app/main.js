@@ -26,6 +26,10 @@ import css from './main.css';
             });
         };
 
+        $scope.playEpisode = function(episode) {
+            $scope.episodeUrl = episode.url;
+        };
+
         function init() {
             getSeries();
         }
