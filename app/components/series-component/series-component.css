@@ -1,0 +1,15 @@
+.series {
+    margin-top: 10px;
+}
+
+.series .title {
+
+    font-weight: bold;
+    margin-left: 10px;
+    vertical-align: super;
+}
+
+.series .icon {
+    width: 20px;
+    height: 20px;
+}

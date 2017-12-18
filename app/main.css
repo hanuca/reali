@@ -1,4 +1,4 @@
-@import 'components/section-component/section-component.css';
+@import 'components/series-component/series-component.css';
 
 html {
   height: 100%;
@@ -15,4 +15,13 @@ html {
     background-color: #00e7ff38;
     border: 2px solid black;
     box-sizing: border-box;
+}
+
+.title {
+
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
 }

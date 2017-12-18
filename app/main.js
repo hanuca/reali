@@ -28,4 +28,4 @@ import css from './main.css';
 require('./services/series-service.js');
 
 // Components
-require('./components/section-component/section-component.js');
+require('./components/series-component/series-component.js');
