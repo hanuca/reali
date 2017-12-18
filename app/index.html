@@ -23,7 +23,7 @@
         </h2>
         <ul class="list" >
             <li ng-repeat="episode in episodesList">
-                {{episode.title}}
+                <episode-component episode="episode" ng-click="play(episode)"></episode-component>
             </li>
         </ul>
     </div>

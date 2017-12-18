@@ -1,4 +1,5 @@
 @import 'components/series-component/series-component.css';
+@import 'components/episode-component/episode-component.css';
 
 html {
   height: 100%;

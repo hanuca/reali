@@ -39,3 +39,4 @@ require('./services/series-service.js');
 
 // Components
 require('./components/series-component/series-component.js');
+require('./components/episode-component/episode-component.js');
