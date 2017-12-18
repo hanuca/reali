@@ -4,37 +4,37 @@ import css from './main.css';
     'use strict';
 
     var seriesApp = angular.module('series-app', []);
-    seriesApp.controller('seriesCtrl', function($scope, seriesService) {
+    seriesApp.controller('seriesCtrl', function(seriesService) {
 
         function getSeries() {
-            $scope.seriesList = [];
+            this.seriesList = [];
             var seriesPromise = seriesService.getSeries();
-            seriesPromise.then(function(data) {
-                _.forEach(data, function(item) {
-                    $scope.seriesList.push(item);
+            seriesPromise.then((data) => {
+                _.forEach(data, (item) => {
+                    this.seriesList.push(item);
                 });
             });
         }
 
-        $scope.getEpisodes = function(series) {
-            $scope.episodesList = [];
+        this.getEpisodes = function(series) {
+            this.episodesList = [];
             var episodesPromise = seriesService.getEpisodes(series.id);
-            episodesPromise.then(function(data) {
-                _.forEach(data, function(item) {
-                    $scope.episodesList.push(item);
+            episodesPromise.then((data) => {
+                _.forEach(data, (item) => {
+                    this.episodesList.push(item);
                 });
             });
         };
 
-        $scope.playEpisode = function(episode) {
-            $scope.episodeUrl = episode.url;
+        this.playEpisode = function(episode) {
+            this.episodeUrl = episode.url;
         };
 
         function init() {
-            getSeries();
+            getSeries.call(this);
         }
 
-        init();
+        init.call(this);
     });
 })();
 
