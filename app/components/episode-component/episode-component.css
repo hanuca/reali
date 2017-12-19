@@ -1,8 +1,15 @@
 .episode {
     margin-top: 10px;
+    line-height: 30px;
 }
 
 .episode .title {
 
     font-weight: bold;
+}
+
+.play-button{
+    float: right;
+    width: 50px;
+    margin-right: 20px;
 }

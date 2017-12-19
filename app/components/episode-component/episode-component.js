@@ -8,7 +8,15 @@
         bindings: {
             episode: '='
         },
-        template: template
+        require: {
+          parent: '^mainComponent'
+        },
+        template: template,
+        controller: function () {
+          this.play = function() {
+            this.parent.playEpisode(this.episode);
+          };
+        },
     });
 
 })();
