@@ -1,0 +1,30 @@
+<div class="container height--100">
+    <div class="section">
+        <h2 class="title">
+            Series
+        </h2>
+        <ul>
+            <li ng-repeat="series in $ctrl.seriesList">
+                <series-component series="series" ng-click="$ctrl.getEpisodes(series)"></series-component>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="title">
+            Episodes
+        </h2>
+        <ul>
+            <li ng-repeat="episode in $ctrl.episodesList">
+                <episode-component episode="episode" ng-click="$ctrl.playEpisode(episode)"></episode-component>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <video width="100%" height="100%" controls ng-if="$ctrl.episodeUrl">
+            <source src="{{$ctrl.episodeUrl}}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
