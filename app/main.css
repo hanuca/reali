@@ -9,9 +9,15 @@ html {
     height: 100%;
 }
 
+.container {
+    display: flex;
+    flex-direction: row; 
+}
+
 .section {
     display: inline-block;
-    width: 33%;
+    max-width: 33%;
+    flex: 1 1 auto;
     height: 100%;
     background-color: #00e7ff38;
     border: 2px solid black;
