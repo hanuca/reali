@@ -3,17 +3,12 @@
 
     var seriesApp = angular.module('series-app');
 
+    var template = require('./episode-component.html');
     seriesApp.component('episodeComponent', {
         bindings: {
             episode: '='
         },
-        template: `<div class="episode">
-
-                      <span class="title">
-                           {{$ctrl.episode.title}}
-                      <span>
-                  </div>`
-         //templateUrl: require('./section-component.html').name
+        template: template
     });
 
 })();
