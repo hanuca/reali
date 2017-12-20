@@ -2,6 +2,8 @@
 @import 'components/series-component/series-component.css';
 @import 'components/episode-component/episode-component.css';
 
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 html {
   height: 100%;
 }
