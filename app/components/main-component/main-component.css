@@ -1,12 +1,12 @@
 .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .section {
     display: inline-block;
-    max-width: 33%;
-    flex: 1 1 auto;
+    flex: 1 1 33%;
     height: 100%;
     background-color: #00e7ff38;
     border: 2px solid black;
@@ -16,4 +16,15 @@
 .title {
 
     text-align: center;
+}
+
+@media (max-width: 960px) {
+
+    .section {
+        flex: 1 1 50%;
+    }
+
+    .episode-section{
+        display: block;
+    }
 }
