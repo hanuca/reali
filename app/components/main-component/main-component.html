@@ -23,7 +23,7 @@
 
     <div class="section">
         <video width="100%" height="100%" controls ng-if="$ctrl.episodeUrl">
-            <source src="{{$ctrl.episodeUrl}}" type="video/mp4">
+            <source ng-src="{{$ctrl.episodeUrl}}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>

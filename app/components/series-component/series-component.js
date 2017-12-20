@@ -8,12 +8,11 @@
             series: '='
         },
         template: `<div class="series">
-                      <img src="{{$ctrl.series.image}}" class="icon">
+                      <img ng-src="{{$ctrl.series.image}}" class="icon">
                       <span class="title">
                            {{$ctrl.series.title}}
                       <span>
                   </div>`
-         //templateUrl: require('./section-component.html').name
     });
 
 })();
